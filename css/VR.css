@@ -18,6 +18,9 @@ header{
 header h1{
     color: white;
     text-align: center;
+    font-family: 'Brush Script MT', cursive;
+    padding-bottom: 20px;
+    font-weight: lighter;
 }
 main{
    margin: 10px;
