@@ -4,14 +4,14 @@ FONTS
 
 @font-face {
     font-family: "BetterFly";
-    src: url("/fonts/BetterFly-Draft.woff2") format("woff2"),
-        url("/fonts/BetterFly-Draft.woff") format("woff");
+    src: url("../fonts/BetterFly-Draft.woff2") format("woff2"),
+        url("../fonts/BetterFly-Draft.woff") format("woff");
 }
 
 @font-face {
     font-family: "BFNarrow";
-    src: url("/fonts/BetterFly-Narrow.woff2") format("woff2"),
-     url("/fonts/BetterFly-Narrow.woff") format("woff");
+    src: url("../fonts/BetterFly-Narrow.woff2") format("woff2"),
+     url("../fonts/BetterFly-Narrow.woff") format("woff");
 }
 
 @font-face {
@@ -82,12 +82,21 @@ html {
     box-sizing: border-box;
     font-family: var(--ff-serif);
     color: var(--clr-text);
-    font-size: 1.125rem;
+    font-size: 1.25rem;
 }
 
-img {
+body {
+    margin: 0;
+}
+
+img {  
     display: block;
     max-width: 100%;
+    max-height: 100%;
+}
+
+section {
+    padding: 3em 1em;
 }
 
 /* Tipografia */
@@ -104,15 +113,126 @@ h2,
 h3 {
     font-family: var(--ff-title);
     line-height: 0.8;
-    font-size: 5rem;
+    letter-spacing: 1px;
 }
 
 h2 {
     font-size: 4rem;
 }
 
+h3 {
+    font-family: var(--ff-serif);
+}
+
 p {
     margin-bottom: 0.85em;
 }
 
-/* Inicio Style */
+.section-title-small {
+    font-size: 3rem;
+}
+
+.text-primary {
+    color: var(--clr-primary);
+}
+
+.logo {
+    font-family: var(--ff-logo);
+    text-align: center;
+    font-size: 3rem;
+    padding: 1rem;
+}
+
+.logo a {
+    text-decoration: none;
+    color: black;
+}
+
+.logo img {
+    size-adjust: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navegacion */
+
+header {
+    padding: 1em 0 2em;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.5em;
+    color: var(--clr-primary);
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+    color: var(--clr-accent);
+    text-decoration: underline;
+}
+
+/* botones */
+
+/*Inicio Style */
+
+.hero {
+    background-color: #666;
+    background-image: url(../img/casa.jpg);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-size:cover;
+    color: white;
+    text-align: center;
+    padding: 15vh 1em;
+}
+
+.intro {
+    text-align: center;
+}
+
+.nosotros {
+    background: var(--clr-accent);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 0;
+}
+
+.nosotros__intro {
+    background-image: url(../img/LOGO\ FINAL\ 2207..png);
+    BA
+    color: black;
+    text-align: center;
+    background-position-y: center; 
+}
+
+.nosotros__body {
+    padding: 1.5em 1em 1em;
+}
+
+@media only screen and (min-width: 750px) {
+     section {
+        padding: 6em 1em;
+     }
+
+     .nosotros {
+        flex-direction: row;
+     }
+
+    .nosotros__intro,
+    .nosotros__body {
+        flex: 0 1 50%;
+        align-self: center;
+    }
+}
