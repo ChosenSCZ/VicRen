@@ -210,8 +210,8 @@ nav a:focus {
 }
 
 .nosotros__intro {
-    background-image: url(../img/LOGO\ FINAL\ 2207..png);
-    BA
+    background-size:100%;
+    max-height: 380px;
     color: black;
     text-align: center;
     background-position-y: center; 
